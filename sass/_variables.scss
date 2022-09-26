@@ -1,0 +1,57 @@
+// ## Colors
+
+// ### Primary
+$clr-primary-1: hsl(245, 46%, 14%);
+$clr-primary-2: hsl(225, 6%, 13%);
+$clr-primary-3: hsl(219, 85%, 52%);
+$clr-primary-3-hover: hsl(219, 85%, 48%);
+$clr-primary-4: hsl(219, 73%, 72%);
+$clr-primary-5: hsl(151, 86%, 33%);
+
+// ### Grey
+$clr-grey-1: hsl(218, 60%, 80%);
+$clr-grey-2: hsl(0, 0%, 55%);
+$clr-grey-3: hsl(228, 5%, 22%);
+$clr-grey-3-hover: hsla(231, 4%, 32%, 0.659);
+
+// ###W&B
+$clr-black: hsl(0, 0%, 0%);
+$clr-white: hsl(0, 0%, 100%);
+
+// ##Typography
+// ###Body Copy
+$extra-small-size: 0.6875rem; // 11
+$extra-small-size-I: 0.75rem; // 12
+$extra-small-size-II: 0.875rem; // 14
+$extra-small-size-III: 0.9375rem; // 15
+$extra-small-size-IIII: 1rem; // 16
+$extra-small-size-IIII: 1.1875rem; // 19
+$extra-small-size-IIIII: 1.25rem; // 20
+$small-size: 1.5rem; // 24
+$small-size-I: 1.5625rem; // 25
+$small-size-II: 1.625rem; // 26
+$mediam-size-III: 1.8125rem; // 29
+$mediam-size-IIII: 2rem; // 32
+$mediam-size-IIIII: 2.1875rem; // 35
+$mediam-size-IIIIII: 2.3125rem; // 37
+$larg-size: 2.5rem; // 40px
+$larg-size-I: 2.8125rem; // 45px
+$larg-size-II: 3.125rem; // 50px
+$larg-size-III: 3.3125rem; // 53px
+$larg-size-IIII: 3.75rem; // 60px
+$larg-size-IIIII: 4.0625rem; // 65px
+$larg-size-IIIIII: 4.375rem; // 70px
+$transition: all 0.3s linear;
+$normal-transition: all 0.3s;
+$spacing: 0.25rem;
+$radius: 0.625rem;
+$l-radius: 1.25rem;
+$opacity: 0.9;
+$light-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+$max-width: px;
+$fixed-width: px;
+
+// ##Font
+$f-family: "Cairo", serif;
+// Weights:

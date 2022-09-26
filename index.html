@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping</title>
+		<!-- FontAwesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
+		<!-- Bootstrap Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+		/>
+		<!-- Normalize Css File -->
+		<link rel="stylesheet" href="font/fontawesome.min.css" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Shortcut Icon -->
+		<link rel="shortcut icon" href="imgs/logo.png" />
+		<!-- Main Css File -->
+		<link rel="stylesheet" href="css/shopping.css" />
+	</head>
+	<body>
+		<!-- Nav -->
+		<div class="main-nav">
+			<nav class="nav">
+				<div class="left-menu flex flex-ai-c">
+					<div class="logo">
+						<a href="#" class="c-i">
+							<img src="imgs/logo.png" alt="" />
+						</a>
+					</div>
+					<div class="search">
+						<button class="search-btn" id="search-btn">
+							<svg width="25" height="25" viewBox="0 0 512 512">
+								<path
+									d="M443.5 420.2L336.7 312.4c20.9-26.2 33.5-59.4 33.5-95.5 0-84.5-68.5-153-153.1-153S64 132.5 64 217s68.5 153 153.1 153c36.6 0 70.1-12.8 96.5-34.2l106.1 107.1c3.2 3.4 7.6 5.1 11.9 5.1 4.1 0 8.2-1.5 11.3-4.5 6.6-6.3 6.8-16.7.6-23.3zm-226.4-83.1c-32.1 0-62.3-12.5-85-35.2-22.7-22.7-35.2-52.9-35.2-84.9 0-32.1 12.5-62.3 35.2-84.9 22.7-22.7 52.9-35.2 85-35.2s62.3 12.5 85 35.2c22.7 22.7 35.2 52.9 35.2 84.9 0 32.1-12.5 62.3-35.2 84.9-22.7 22.7-52.9 35.2-85 35.2z"
+									fill="#ffffff"
+								/>
+							</svg>
+						</button>
+						<input type="text" id="search" placeholder="Search" />
+					</div>
+				</div>
+				<div class="right-menu">
+					<div class="account-controls">
+						<div class="main-cart">
+							<div class="cart-icon" id="cart-icon">
+								<span class="cart-sum" id="cartNum">0</span>
+								<button>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 48 48"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path d="M39 32H13L8 12H44L39 32Z" fill="#ffffff" />
+										<path
+											d="M3 6H6.5L8 12M8 12L13 32H39L44 12H8Z"
+											stroke="#ffffff"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<circle
+											cx="13"
+											cy="39"
+											r="3"
+											stroke="#ffffff"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<circle
+											cx="39"
+											cy="39"
+											r="3"
+											stroke="#ffffff"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M22 22H30"
+											stroke="#FFF"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M26 26V18"
+											stroke="#FFF"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</button>
+								<span class="arrow hide"></span>
+							</div>
+							<div class="cart-overlay hide">
+								<div class="cart">
+									<div class="btns">
+										<span class="close-cart" id="close-cart">
+											<button>
+												<svg width="32" height="32" viewBox="0 0 24 24">
+													<path
+														fill="hsl(219, 88%, 63%)"
+														d="M15.125 21.1L6.7 12.7q-.15-.15-.212-.325q-.063-.175-.063-.375t.063-.375q.062-.175.212-.325l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+													/>
+												</svg>
+											</button>
+										</span>
+										<h2>cart</h2>
+										<span class="remove-all-products">
+											<button>
+												<svg width="32" height="32" viewBox="0 0 28 28">
+													<path
+														d="M19.5 16a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zM14 2.25a3.75 3.75 0 0 1 3.745 3.55l.005.2h5.5a.75.75 0 0 1 .102 1.493l-.102.007h-1.059l-.634 7.832a6.468 6.468 0 0 0-1.48-.307l.61-7.525H7.313l1.211 14.932a2.25 2.25 0 0 0 2.243 2.068l2.966.001c.287.551.651 1.056 1.077 1.5L10.767 26a3.75 3.75 0 0 1-3.738-3.447L5.808 7.5H4.75a.75.75 0 0 1-.743-.648L4 6.75a.75.75 0 0 1 .648-.743L4.75 6h5.5A3.75 3.75 0 0 1 14 2.25zm3.024 16.774a.5.5 0 0 0 0 .707l1.769 1.77l-1.767 1.766a.5.5 0 0 0 .707.708l1.767-1.767l1.77 1.769a.5.5 0 0 0 .707-.707L20.208 21.5l1.771-1.77a.5.5 0 1 0-.707-.707l-1.771 1.77l-1.77-1.77a.5.5 0 0 0-.707 0zM14 3.75a2.25 2.25 0 0 0-2.245 2.096L11.75 6h4.5l-.005-.154A2.25 2.25 0 0 0 14 3.75z"
+														fill="hsl(219, 88%, 63%)"
+														fill-rule="nonzero"
+													/>
+												</svg>
+											</button>
+										</span>
+									</div>
+									<div class="cart-products"></div>
+									<div class="total">
+										<h2>Your Total: $<span id="total">0</span></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- Landing -->
+		<section class="landing-sec">
+			<div class="container">
+				<div class="main-landing">
+					<div class="page-pre">
+						<div class="cover">
+							<img
+								src="imgs/black-friday-elements-assortment_23-2149074075.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="name">
+							<i class="fa-solid fa-store shop-icon"></i>
+							<h3>PP shop official</h3>
+							<i class="bi bi-patch-check-fill check-icon"></i>
+						</div>
+						<div class="btns">
+							<a
+								class="follow btn btn-hover"
+								href="https://www.facebook.com/"
+								target="_blank"
+								>Follow
+								<i class="bi bi-plus"></i>
+							</a>
+							<a
+								class="chat btn btn-hover"
+								href="https://www.facebook.com/messages"
+								target="_blank"
+								>Chat
+								<i class="bi bi-chat-square-text"></i>
+							</a>
+						</div>
+					</div>
+					<div class="page-info">
+						<ul>
+							<li>
+								<svg width="32" height="32" viewBox="0 0 24 24">
+									<path
+										fill="#ffffff"
+										d="M7 22q-.825 0-1.412-.587Q5 20.825 5 20q0-.825.588-1.413Q6.175 18 7 18t1.412.587Q9 19.175 9 20q0 .825-.588 1.413Q7.825 22 7 22Zm10 0q-.825 0-1.412-.587Q15 20.825 15 20q0-.825.588-1.413Q16.175 18 17 18t1.413.587Q19 19.175 19 20q0 .825-.587 1.413Q17.825 22 17 22ZM12 9.5q-.425 0-.712-.288Q11 8.925 11 8.5t.288-.713Q11.575 7.5 12 7.5t.713.287Q13 8.075 13 8.5t-.287.712Q12.425 9.5 12 9.5ZM11 6V1h2v5ZM7 17q-1.125 0-1.725-.988q-.6-.987-.025-1.962L6.6 11.6L3 4H1V2h3.275l4.25 9h7.025l3.875-7l1.75.95l-3.875 7q-.275.5-.725.775q-.45.275-1.025.275H8.1L7 15h12v2Z"
+									/>
+								</svg>
+								products:
+								<span>600</span>
+							</li>
+							<li>
+								<svg width="32" height="32" viewBox="0 0 20 20">
+									<path
+										fill="#ffffff"
+										d="M10 3a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3ZM7.5 4.5a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0Zm8-.5a1 1 0 1 0 0 2a1 1 0 0 0 0-2Zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm-10 0a1 1 0 1 1 2 0a1 1 0 0 1-2 0Zm1-2a2 2 0 1 0 0 4a2 2 0 0 0 0-4Zm.6 11.998A2 2 0 0 1 3 13V9.25A.25.25 0 0 1 3.25 9h1.764c.04-.367.17-.708.365-1H3.25C2.56 8 2 8.56 2 9.25V13a3 3 0 0 0 3.404 2.973a4.963 4.963 0 0 1-.304-.975Zm9.496.975A3 3 0 0 0 18 13V9.25C18 8.56 17.44 8 16.75 8h-2.129c.196.292.325.633.365 1h1.764a.25.25 0 0 1 .25.25V13a2 2 0 0 1-2.1 1.998a4.966 4.966 0 0 1-.304.975ZM7.25 8C6.56 8 6 8.56 6 9.25V14a4 4 0 0 0 8 0V9.25C14 8.56 13.44 8 12.75 8h-5.5ZM7 9.25A.25.25 0 0 1 7.25 9h5.5a.25.25 0 0 1 .25.25V14a3 3 0 1 1-6 0V9.25Z"
+									/>
+								</svg>
+								followers:
+								<span>40.5K</span>
+							</li>
+							<li>
+								<svg width="32" height="32" viewBox="0 0 24 24">
+									<path
+										fill="#ffffff"
+										d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6s6 2.685 6 6s-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm5.793 8.914l3.535-3.535l1.415 1.414l-4.95 4.95l-3.536-3.536l1.415-1.414l2.12 2.121z"
+									/>
+								</svg>
+								follwoing:
+								<span>1.5K</span>
+							</li>
+							<li>
+								<svg width="32" height="32" viewBox="0 0 24 24">
+									<path
+										fill="#ffffff"
+										d="m19.65 9.04l-4.84-.42l-1.89-4.45c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.73l3.67-3.18c.67-.58.32-1.68-.56-1.75zM12 15.4l-3.76 2.27l1-4.28l-3.32-2.88l4.38-.38L12 6.1l1.71 4.04l4.38.38l-3.32 2.88l1 4.28L12 15.4z"
+									/>
+								</svg>
+								rating:
+								<span>4.9</span>
+							</li>
+							<li>
+								<svg width="32" height="32" viewBox="0 0 256 256">
+									<path
+										fill="#ffffff"
+										d="M40 238.8a16.4 16.4 0 0 1-6.8-1.5a15.7 15.7 0 0 1-9.2-14.5V64a16 16 0 0 1 16-16h176a16 16 0 0 1 16 16v128a16 16 0 0 1-16 16H82.5l-32.2 27.1a15.9 15.9 0 0 1-10.3 3.7ZM40 64v158.8l32.2-27a15.6 15.6 0 0 1 10.3-3.8H216V64Zm37.4 137.9Z"
+									/>
+								</svg>
+								chat performance:
+								<span>93%</span>
+							</li>
+							<li>
+								<svg width="32" height="32" viewBox="0 0 24 24">
+									<path
+										fill="#ffffff"
+										d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+									/>
+								</svg>
+								joined:
+								<span>5 years ago</span>
+							</li>
+						</ul>
+					</div>
+					<div class="events">
+						<div class="awards">
+							<p>Awards for top shop</p>
+							<i class="fa-solid fa-award"></i>
+						</div>
+						<div class="best-seller">
+							<p>Best seller of the year</p>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</div>
+					<div class="contact-info">
+						<div class="whatsapp">
+							<svg width="32" height="32" viewBox="0 0 24 24">
+								<path
+									fill="#ffffff"
+									d="M22 6.55a12.61 12.61 0 0 0-.1-1.29a4.29 4.29 0 0 0-.37-1.08a3.66 3.66 0 0 0-.71-1a3.91 3.91 0 0 0-1-.71a4.28 4.28 0 0 0-1.08-.36A10.21 10.21 0 0 0 17.46 2H6.55a12.61 12.61 0 0 0-1.29.1a4.29 4.29 0 0 0-1.08.37a3.66 3.66 0 0 0-1 .71a3.91 3.91 0 0 0-.71 1a4.28 4.28 0 0 0-.36 1.08A10.21 10.21 0 0 0 2 6.54v10.91a12.61 12.61 0 0 0 .1 1.29a4.29 4.29 0 0 0 .37 1.08a3.66 3.66 0 0 0 .71 1a3.91 3.91 0 0 0 1 .71a4.28 4.28 0 0 0 1.08.36a10.21 10.21 0 0 0 1.28.11h10.91a12.61 12.61 0 0 0 1.29-.1a4.29 4.29 0 0 0 1.08-.37a3.66 3.66 0 0 0 1-.71a3.91 3.91 0 0 0 .71-1a4.28 4.28 0 0 0 .36-1.08a10.21 10.21 0 0 0 .11-1.28V6.55ZM12.23 19a7.12 7.12 0 0 1-3.43-.9l-3.8 1l1-3.72a7.11 7.11 0 0 1-1-3.58a7.18 7.18 0 1 1 7.23 7.2Zm0-13.13A6 6 0 0 0 7.18 15l.14.23l-.6 2.19L9 16.8l.22.13a6 6 0 0 0 3 .83a6 6 0 0 0 6-6a6 6 0 0 0-6-6Zm3.5 8.52a1.82 1.82 0 0 1-1.21.85a2.33 2.33 0 0 1-1.12-.07a8.9 8.9 0 0 1-1-.38a8 8 0 0 1-3.06-2.7a3.48 3.48 0 0 1-.73-1.85a2 2 0 0 1 .63-1.5a.65.65 0 0 1 .48-.22H10c.11 0 .26 0 .4.31s.51 1.24.56 1.33a.34.34 0 0 1 0 .31a1.14 1.14 0 0 1-.18.3c-.09.11-.19.24-.27.32s-.18.18-.08.36a5.56 5.56 0 0 0 1 1.24a5 5 0 0 0 1.44.89c.18.09.29.08.39 0s.45-.52.57-.7s.24-.15.4-.09s1.05.49 1.23.58s.29.13.34.21a1.56 1.56 0 0 1-.07.78Z"
+								/>
+							</svg>
+							<span>9812012</span>
+						</div>
+						<div class="instagram">
+							<svg width="32" height="32" viewBox="0 0 448 512">
+								<path
+									fill="#ffffff"
+									d="M224 202.66A53.34 53.34 0 1 0 277.36 256A53.38 53.38 0 0 0 224 202.66Zm124.71-41a54 54 0 0 0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31 6.43a54 54 0 0 0-30.41 30.41c-8.28 21-6.43 71.05-6.43 94.33s-1.85 73.27 6.47 94.34a54 54 0 0 0 30.41 30.41c21 8.29 71 6.43 94.31 6.43s73.24 1.93 94.3-6.43a54 54 0 0 0 30.41-30.41c8.35-21 6.43-71.05 6.43-94.33s1.92-73.26-6.43-94.33ZM224 338a82 82 0 1 1 82-82a81.9 81.9 0 0 1-82 82Zm85.38-148.3a19.14 19.14 0 1 1 19.13-19.14a19.1 19.1 0 0 1-19.09 19.18ZM400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48Zm-17.12 290c-1.29 25.63-7.14 48.34-25.85 67s-41.4 24.63-67 25.85c-26.41 1.49-105.59 1.49-132 0c-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61 0-132c1.29-25.63 7.07-48.34 25.85-67s41.47-24.56 67-25.78c26.41-1.49 105.59-1.49 132 0c25.63 1.29 48.33 7.15 67 25.85s24.63 41.42 25.85 67.05c1.49 26.32 1.49 105.44 0 131.88Z"
+								/>
+							</svg>
+							<span>@mwrshop</span>
+						</div>
+						<div class="facebook">
+							<svg width="32" height="32" viewBox="0 0 32 32">
+								<path
+									fill="#ffffff"
+									d="M25.566 2.433H6.433c-2.2 0-4 1.8-4 4v19.135c0 2.2 1.8 4 4 4h19.135c2.2 0 4-1.8 4-4V6.433c-.002-2.2-1.8-4-4.002-4zm-.257 14.483h-3.22v11.65h-4.818v-11.65h-2.41V12.9h2.41v-2.41c0-3.276 1.36-5.225 5.23-5.225h3.217V9.28h-2.012c-1.504 0-1.604.563-1.604 1.61l-.013 2.01h3.645l-.426 4.016z"
+								/>
+							</svg>
+							<span>mwrshop</span>
+						</div>
+						<div class="twitter">
+							<svg width="28" height="32" viewBox="0 0 448 512">
+								<path
+									fill="#ffffff"
+									d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3.6 10.4.8 15.8.8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34z"
+								/>
+							</svg>
+							<span>mWirshop</span>
+						</div>
+						<div class="youtube">
+							<svg width="32" height="32" viewBox="0 0 448 512">
+								<path
+									fill="#ffffff"
+									d="m186.8 202.1l95.2 54.1l-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4c-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9c7.6-28.5 7.6-88.1 7.6-88.1z"
+								/>
+							</svg>
+							<span>reviewmwrshop</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Products -->
+		<section id="our-products" class="our-products">
+			<div class="container">
+				<div class="main-product-title">
+					<svg width="32" height="32" viewBox="0 0 20 20">
+						<path
+							fill="#ffffff"
+							d="M17 8h1v11H2V8h1V6c0-2.76 2.24-5 5-5c.71 0 1.39.15 2 .42A4.94 4.94 0 0 1 12 1c2.76 0 5 2.24 5 5v2zM5 6v2h2V6c0-1.13.39-2.16 1.02-3H8C6.35 3 5 4.35 5 6zm10 2V6c0-1.65-1.35-3-3-3h-.02A4.98 4.98 0 0 1 13 6v2h2zm-5-4.22C9.39 4.33 9 5.12 9 6v2h2V6c0-.88-.39-1.67-1-2.22z"
+						/>
+					</svg>
+					<h1>Our Products</h1>
+				</div>
+			</div>
+			<div class="main-products">
+				<div class="products-container"></div>
+			</div>
+		</section>
+		<!-- Contentful -->
+		<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+		<!-- Main App -->
+		<script src="js/app.js"></script>
+	</body>
+</html>
