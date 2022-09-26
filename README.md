@@ -1,2 +1,2 @@
 # Shopping
-![alt text](https://github.com/7amoAAS/CRUDS/blob/main/Preview.jpg)
+![alt text](https://raw.githubusercontent.com/7amoAAS/Shopping/main/Preview.jpg)
